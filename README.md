@@ -1,4 +1,4 @@
-# Binance Smart Chain - Fullnode (main or test) - (servercontainers/bsc) [x86 + arm]
+# Binance Smart Chain - Fullnode (main or test) - (slaaitjuh/bsc) [x86 + arm]
 
 Binance Smart Chain Fullnode.
 
@@ -54,7 +54,7 @@ version: '3'
  
 services:
   bsc:
-    image: servercontainers/bsc
+    image: slaaitjuh/bsc
     restart: always
     environment:
       NETWORK: main

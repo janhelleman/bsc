@@ -1,10 +1,10 @@
-image: servercontainers/bsc:latest
+image: slaaitjuh/bsc:latest
 manifests:
-  - image: servercontainers/bsc:latest-amd64
+  - image: slaaitjuh/bsc:latest-amd64
     platform:
       architecture: amd64
       os: linux
-  - image: servercontainers/bsc:latest-arm64v8
+  - image: slaaitjuh/bsc:latest-arm64v8
     platform:
       architecture: arm64
       os: linux
