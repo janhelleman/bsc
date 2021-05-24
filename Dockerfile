@@ -51,4 +51,4 @@ EXPOSE 8546/tcp
 # GraphQL API
 EXPOSE 8547/tcp
 
-CMD sh -xc "cd /data; [ ! -f '/data/genesis.json' ] && unzip /$NETWORK'net.zip' && geth --datadir . init genesis.json && sed -i '/^HTTP/d' ./config.toml; exec geth --config ./config.toml --datadir . --pprof --pprofaddr 0.0.0.0 --metrics --rpc --rpcapi eth,net,web3,txpool,parlia --rpccorsdomain '*' --rpcvhosts '*' --rpcaddr 0.0.0.0 --rpcport 8545 --ws --wsapi eth,net,web3 --wsorigins '*' --wsaddr 0.0.0.0 --wsport 8546 --graphql --graphql.addr 0.0.0.0 --graphql.port 8587 --graphql.corsdomain '*' --graphql.vhosts '*'"
+CMD sh -xc "cd /data; [ ! -f '/data/genesis.json' ] && unzip /$NETWORK'net.zip' && geth --datadir.ancient . --datadir ./datadir init genesis.json && sed -i '/^HTTP/d' ./config.toml; exec geth --config ./config.toml --datadir.ancient . --datadir ./datadir --pprof --pprofaddr 0.0.0.0 --metrics --rpc --rpcapi eth,net,web3,txpool,parlia --rpccorsdomain '*' --rpcvhosts '*' --rpcaddr 0.0.0.0 --rpcport 8545 --ws --wsapi eth,net,web3 --wsorigins '*' --wsaddr 0.0.0.0 --wsport 8546 --graphql --graphql.addr 0.0.0.0 --graphql.port 8587 --graphql.corsdomain '*' --graphql.vhosts '*'"
