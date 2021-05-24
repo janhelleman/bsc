@@ -1,4 +1,4 @@
-# Binance Smart Chain - Fullnode (main or test) - (slaaitjuh/bsc) [x86 + arm]
+# Binance Smart Chain - Fullnode (main or test) - (slaaitjuh/bsc)
 
 Binance Smart Chain Fullnode.
 
@@ -9,8 +9,6 @@ Binance Smart Chain Fullnode.
 * 2021-04-23
     * accept more connections (ws, rpc) and correct expose
     * http now listens to everything
-* 2021-04-22
-    * multiarch build
 
 ## Info
 
