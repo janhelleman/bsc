@@ -1,14 +1,16 @@
 FROM debian:10 as builder
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
-    add-apt-repository ppa:longsleep/golang-backports && \
     apt-get -q -y update && \
     apt-get -q -y install wget \
                           curl \
                           git \
+                          tar \
                           unzip \
-                          build-essential \
-                          golang && \
+                          build-essential && \
+    wget https://dl.google.com/go/go1.16.4.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go1.16.4.linux-amd64.tar.gz && \
+    export PATH=$PATH:/usr/local/go/bin && \
     apt-get -q -y clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     \
