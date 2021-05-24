@@ -1,6 +1,7 @@
 FROM debian:10 as builder
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
+    add-apt-repository ppa:longsleep/golang-backports \
     apt-get -q -y update && \
     apt-get -q -y install wget \
                           curl \
